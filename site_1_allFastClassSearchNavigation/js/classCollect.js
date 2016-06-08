@@ -1,4 +1,5 @@
-function getAllClasses(context, output) {
+
+	function getAllClasses(context, output) {
 	var finalArray = [],
 		mainArray = [],
 		allElements = $(context).find($('*'));//get all elements of our page
@@ -44,7 +45,7 @@ function getAllClasses(context, output) {
 		}
 	});
 	for (var i = 0; i < finalArray.length; i++) {
-		$('<div>' + finalArray[i] + ' }</div>').appendTo(output);
+		$('<p>' + finalArray[i] + ' }</p>').appendTo(output);
 	}
 
 
@@ -57,10 +58,10 @@ function getAllClasses(context, output) {
 			if (j == k) B[k++] = A[i];
 		}
 		return B;
+		}
 	}
-}
 
 // вызовв функции
-$(document).ready(function ($) {
-	getAllClasses('html','.elements_list');
-});
+//$(document).ready(function ($) {
+//	getAllClasses('html','.elements_list');
+//});
